@@ -1,0 +1,1 @@
+if(navigator.serviceWorker){navigator.serviceWorker.register("/owasp-wstg-ja/sw.js",{scope:"/owasp-wstg-ja/"});}
