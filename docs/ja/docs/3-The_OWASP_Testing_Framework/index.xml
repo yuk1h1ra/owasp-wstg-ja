@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 The OWASP Testing Framework on OWASP WSTG JP</title>
+    <link>https://example.com/ja/docs/3-The_OWASP_Testing_Framework/</link>
+    <description>Recent content in 3 The OWASP Testing Framework on OWASP WSTG JP</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/ja/docs/3-The_OWASP_Testing_Framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0 the Web Security Testing Framework</title>
+      <link>https://example.com/ja/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/ja/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/</guid>
+      <description>The Web Security Testing Framework #  Overview #  This section describes a typical testing framework that can be developed within an organization. It can be seen as a reference framework comprised of techniques and tasks that are appropriate at various phases of the software development life cycle (SDLC). Companies and project teams can use this model to develop their own testing framework, and to scope testing services from vendors.</description>
+    </item>
+    
+    <item>
+      <title>1 Penetration Testing Methodologies</title>
+      <link>https://example.com/ja/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/ja/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/</guid>
+      <description>Penetration Testing Methodologies #  Summary #    Penetration Testing Methodologies   Summary  OWASP Testing Guides  Penetration Testing Execution Standard  PCI Penetration Testing Guide   PCI DSS Penetration Testing Guidance  PCI DSS Penetration Testing Requirements    Penetration Testing Framework  Technical Guide to Information Security Testing and Assessment  Open Source Security Testing Methodology Manual  References    OWASP Testing Guides #  In terms of technical security testing execution, the OWASP testing guides are highly recommended.</description>
+    </item>
+    
+  </channel>
+</rss>

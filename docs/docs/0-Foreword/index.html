@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.0" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Foreword by Eoin Keary #  The problem of insecure software is perhaps the most important technical challenge of our time. The dramatic rise of web applications enabling business, social networking etc has only compounded the requirements to establish a robust approach to writing and securing our Internet, Web Applications and Data.
+At the Open Web Application Security Project® (OWASP®), we&rsquo;re trying to make the world a place where insecure software is the anomaly, not the norm.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="0 Foreword" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://example.com/docs/0-Foreword/" />
+
+<title>0 Foreword | OWASP WSTG JP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="alternate" hreflang="ja" href="https://example.com/ja/docs/0-Foreword/" title="0 Foreword">
+
+<link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
+<script defer src="/en.search.min.22fc95f6482e5cd893b08e8ac1fcfa88557faa0a0e5a356d02be3538479958b4.js" integrity="sha256-IvyV9kguXNiTsI6Kwfz6iFV/qgoOWjVtAr41OEeZWLQ="></script>
+
+<script defer src="/sw.min.74a8bb07f0bee86d6bb9a2750f073f14d93c7e4512f28860370cfd879e9719b4.js" integrity="sha256-dKi7B/C&#43;6G1ruaJ1Dwc/FNk8fkUS8ohgNwz9h56XGbQ="></script>
+<link rel="alternate" type="application/rss+xml" href="https://example.com/docs/0-Foreword/index.xml" title="OWASP WSTG JP" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>OWASP WSTG JP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/0-Foreword/" class=" active">0 Foreword</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/3-The_OWASP_Testing_Framework/" class="">3 The OWASP Testing Framework</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/" class="">0 the Web Security Testing Framework</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/" class="">1 Penetration Testing Methodologies</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/yuk1h1ra/owasp-wstg-ja" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>0 Foreword</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#foreword-by-eoin-keary">Foreword by Eoin Keary</a>
+      <ul>
+        <li><a href="#why-owasp">Why OWASP?</a></li>
+        <li><a href="#tailoring-and-prioritizing">Tailoring and Prioritizing</a></li>
+        <li><a href="#the-role-of-automated-tools">The Role of Automated Tools</a></li>
+        <li><a href="#call-to-action">Call to Action</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="foreword-by-eoin-keary">
+  Foreword by Eoin Keary
+  <a class="anchor" href="#foreword-by-eoin-keary">#</a>
+</h1>
+<p>The problem of insecure software is perhaps the most important technical challenge of our time. The dramatic rise of web applications enabling business, social networking etc has only compounded the requirements to establish a robust approach to writing and securing our Internet, Web Applications and Data.</p>
+<p>At the Open Web Application Security Project® (OWASP®), we&rsquo;re trying to make the world a place where insecure software is the anomaly, not the norm. The OWASP Testing Guide has an important role to play in solving this serious issue. It is vitally important that our approach to testing software for security issues is based on the principles of engineering and science. We need a consistent, repeatable and defined approach to testing web applications. A world without some minimal standards in terms of engineering and technology is a world in chaos.</p>
+<p>It goes without saying that you can&rsquo;t build a secure application without performing security testing on it. Testing is part of a wider approach to build a secure system. Many software development organizations do not include security testing as part of their standard software development process. What is even worse is that many security vendors deliver testing with varying degrees of quality and rigor.</p>
+<p>Security testing, by itself, isn&rsquo;t a particularly good stand alone measure of how secure an application is, because there are an infinite number of ways that an attacker might be able to make an application break, and it simply isn&rsquo;t possible to test them all. We can&rsquo;t hack ourselves secure as we only have a limited time to test and defend where an attacker does not have such constraints.</p>
+<p>In conjunction with other OWASP projects such as the Code Review Guide, the Development Guide and tools such as 
+  <a href="https://www.zaproxy.org/">OWASP ZAP</a>, this is a great start towards building and maintaining secure applications. This Testing Guide will show you how to verify the security of your running application. I highly recommend using these guides as part of your application security initiatives.</p>
+<h2 id="why-owasp">
+  Why OWASP?
+  <a class="anchor" href="#why-owasp">#</a>
+</h2>
+<p>Creating a guide like this is a huge undertaking, requiring the expertise of hundreds of people around the world. There are many different ways to test for security flaws and this guide captures the consensus of the leading experts on how to perform this testing quickly, accurately, and efficiently. OWASP gives like minded security folks the ability to work together and form a leading practice approach to a security problem.</p>
+<p>The importance of having this guide available in a completely free and open way is important for the foundation&rsquo;s mission. It gives anyone the ability to understand the techniques used to test for common security issues. Security should not be a black art or closed secret that only a few can practice. It should be open to all and not exclusive to security practitioners but also QA, Developers and Technical Managers. The project to build this guide keeps this expertise in the hands of the people who need it - you, me and anyone that is involved in building software.</p>
+<p>This guide must make its way into the hands of developers and software testers. There are not nearly enough application security experts in the world to make any significant dent in the overall problem. The initial responsibility for application security must fall on the shoulders of the developers because they write the code. It shouldn&rsquo;t be a surprise that developers aren&rsquo;t producing secure code if they&rsquo;re not testing for it or consider the types of bugs which introduce vulnerability.</p>
+<p>Keeping this information up to date is a critical aspect of this guide project. By adopting the wiki approach, the OWASP community can evolve and expand the information in this guide to keep pace with the fast moving application security threat landscape.</p>
+<p>This Guide is a great testament to the passion and energy our members and project volunteers have for this subject. It shall certainly help to change the world a line of code at a time.</p>
+<h2 id="tailoring-and-prioritizing">
+  Tailoring and Prioritizing
+  <a class="anchor" href="#tailoring-and-prioritizing">#</a>
+</h2>
+<p>You should adopt this guide in your organization. You may need to tailor the information to match your organization&rsquo;s technologies, processes, and organizational structure.</p>
+<p>In general there are several different roles within organizations that may use this guide:</p>
+<ul>
+<li>Developers should use this guide to ensure that they are producing secure code. These tests should be a part of normal code and unit testing procedures.</li>
+<li>Software testers and QA should use this guide to expand the set of test cases they apply to applications. Catching these vulnerabilities early saves considerable time and effort later.</li>
+<li>Security specialists should use this guide in combination with other techniques as one way to verify that no security holes have been missed in an application.</li>
+<li>Project Managers should consider the reason this guide exists and that security issues are manifested via bugs in code and design.</li>
+</ul>
+<p>The most important thing to remember when performing security testing is to continuously re-prioritize. There are an infinite number of possible ways that an application could fail, and organizations always have limited testing time and resources. Be sure time and resources are spent wisely. Try to focus on the security holes that are a real risk to your business. Try to contextualize risk in terms of the application and its use cases.</p>
+<p>This guide is best viewed as a set of techniques that you can use to find different types of security holes. But not all the techniques are equally important. Try to avoid using the guide as a checklist, new vulnerabilities are always manifesting and no guide can be an exhaustive list of &ldquo;things to test for&rdquo;, but rather a great place to start.</p>
+<h2 id="the-role-of-automated-tools">
+  The Role of Automated Tools
+  <a class="anchor" href="#the-role-of-automated-tools">#</a>
+</h2>
+<p>There are a number of companies selling automated security analysis and testing tools. Remember the limitations of these tools so that you can use them for what they&rsquo;re good at. As Michael Howard put it at the 2006 OWASP AppSec Conference in Seattle, &ldquo;Tools do not make software secure! They help scale the process and help enforce policy.&rdquo;</p>
+<p>Most importantly, these tools are generic - meaning that they are not designed for your custom code, but for applications in general. That means that while they can find some generic problems, they do not have enough knowledge of your application to allow them to detect most flaws. In my experience, the most serious security issues are the ones that are not generic, but deeply intertwined in your business logic and custom application design.</p>
+<p>These tools can also be very useful, since they do find lots of potential issues. While running the tools doesn&rsquo;t take much time, each one of the potential problems takes time to investigate and verify. If the goal is to find and eliminate the most serious flaws as quickly as possible, consider whether your time is best spent with automated tools or with the techniques described in this guide. Still, these tools are certainly part of a well-balanced application security program. Used wisely, they can support your overall processes to produce more secure code.</p>
+<h2 id="call-to-action">
+  Call to Action
+  <a class="anchor" href="#call-to-action">#</a>
+</h2>
+<p>If you&rsquo;re building, designing or testing software, I strongly encourage you to get familiar with the security testing guidance in this document. It is a great road map for testing the most common issues that applications are facing today, but it is not exhaustive. If you find errors, please add a note to the discussion page or make the change yourself. You&rsquo;ll be helping thousands of others who use this guide.</p>
+<p>Please consider 
+  <a href="https://owasp.org/membership/">joining us</a> as an individual or corporate member so that we can continue to produce materials like this testing guide and all the other great projects at OWASP.</p>
+<p>Thank you to all the past and future contributors to this guide, your work will help to make applications worldwide more secure.</p>
+<p>&ndash;Eoin Keary, OWASP Board Member, April 19, 2013</p>
+<p>Open Web Application Security Project and OWASP are registered trademarks of the OWASP Foundation, Inc.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+  
+
+  
+
+
+  
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://example.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/ja/docs/0-Foreword/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Japanese
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+  <div><a class="flex align-center" href="https://github.com/yuk1h1ra/owasp-wstg-ja/commit/7cf5bfb74a0c2385b6b6db64041506a9adca92a7" title='Last modified by yuk1h1ra | December 4, 2020' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>December 4, 2020</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/yuk1h1ra/owasp-wstg-ja/edit/master/content/docs/0-Foreword/_index.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#foreword-by-eoin-keary">Foreword by Eoin Keary</a>
+      <ul>
+        <li><a href="#why-owasp">Why OWASP?</a></li>
+        <li><a href="#tailoring-and-prioritizing">Tailoring and Prioritizing</a></li>
+        <li><a href="#the-role-of-automated-tools">The Role of Automated Tools</a></li>
+        <li><a href="#call-to-action">Call to Action</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
