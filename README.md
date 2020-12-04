@@ -28,7 +28,7 @@ $ brew install hugo
 $ sudo pacman -S hugo
 ```
 
-### Start the Hugo server
+### 2. Start the Hugo server
 
 ローカル環境で確認をしたい場合、以下のコマンドを実行後、[http://localhost:1313](http://localhost:1313)にアクセスしてください。
 
