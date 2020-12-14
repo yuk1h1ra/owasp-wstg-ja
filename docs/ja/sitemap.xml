@@ -3,86 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/0-Foreword/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/docs/0-Foreword/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/0-Foreword/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/0-The_Web_Security_Testing_Framework/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/docs/3-The_OWASP_Testing_Framework/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/3-The_OWASP_Testing_Framework/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/menu/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/menu/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/menu/"
-                />
-  </url>
-  
-  <url>
     <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/categories/"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -92,27 +22,16 @@
   </url>
   
   <url>
-    <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/docs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/ja/docs/"
-                />
-  </url>
-  
-  <url>
     <loc>https://yuk1h1ra.github.io/owasp-wstg-ja/ja/</loc>
-    <lastmod>2020-12-04T13:34:40+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/fr/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -126,7 +45,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://yuk1h1ra.github.io/owasp-wstg-ja/tags/"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://yuk1h1ra.github.io/owasp-wstg-ja/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"

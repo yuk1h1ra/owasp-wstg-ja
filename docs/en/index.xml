@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WSTG on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/</link>
+    <description>Recent content in WSTG on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 15:53:00 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Web Security Testing Framework</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/</link>
+      <pubDate>Mon, 14 Dec 2020 16:19:28 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/</guid>
+      <description>The Web Security Testing Framework Overview This section describes a typical testing framework that can be developed within an organization. It can be seen as a reference framework comprised of techniques and tasks that are appropriate at various phases of the software development life cycle (SDLC). Companies and project teams can use this model to develop their own testing framework, and to scope testing services from vendors. This framework should not be seen as prescriptive, but as a flexible approach that can be extended and molded to fit an organization&amp;rsquo;s development process and culture.</description>
+    </item>
+    
+    <item>
+      <title>Penetration Testing Methodologies</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/</link>
+      <pubDate>Mon, 14 Dec 2020 16:22:48 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/</guid>
+      <description>Penetration Testing Methodologies Summary  Penetration Testing Methodologies  Summary OWASP Testing Guides Penetration Testing Execution Standard PCI Penetration Testing Guide  PCI DSS Penetration Testing Guidance PCI DSS Penetration Testing Requirements   Penetration Testing Framework Technical Guide to Information Security Testing and Assessment Open Source Security Testing Methodology Manual References    OWASP Testing Guides In terms of technical security testing execution, the OWASP testing guides are highly recommended.</description>
+    </item>
+    
+    <item>
+      <title>Conduct Search Engine Descovery Reconnaissanse for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:37:51 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/</guid>
+      <description>Conduct Search Engine Discovery Reconnaissance for Information Leakage    ID     WSTG-INFO-01    Summary In order for search engines to work, computer programs (or robots) regularly fetch data (referred to as crawling from billions of pages on the web. These programs find web content and functionality by following links from other pages, or by looking at sitemaps. If a website uses a special file called robots.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Server</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/</link>
+      <pubDate>Mon, 14 Dec 2020 16:41:10 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/</guid>
+      <description>Fingerprint Web Server    ID     WSTG-INFO-02    Summary Web server fingerprinting is the task of identifying the type and version of web server that a target is running on. While web server fingerprinting is often encapsulated in automated testing tools, it is important for researchers to understand the fundamentals of how these tools attempt to identify software, and why this is useful.</description>
+    </item>
+    
+    <item>
+      <title>Review Webserver Metafiles for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:52:16 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/</guid>
+      <description>Review Webserver Metafiles for Information Leakage    ID     WSTG-INFO-03    Summary This section describes how to test various metadata files for information leakage of the web application&amp;rsquo;s path(s), or functionality. Furthermore, the list of directories that are to be avoided by Spiders, Robots, or Crawlers can also be created as a dependency for Map execution paths through application. Other information may also be collected to identify attack surface, technology details, or for use in social engineering engagement.</description>
+    </item>
+    
+    <item>
+      <title>Enumerate Applications on Webserver</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/</link>
+      <pubDate>Mon, 14 Dec 2020 16:55:34 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/</guid>
+      <description>Enumerate Applications on Webserver    ID     WSTG-INFO-04    Summary A paramount step in testing for web application vulnerabilities is to find out which particular applications are hosted on a web server. Many applications have known vulnerabilities and known attack strategies that can be exploited in order to gain remote control or to exploit data. In addition, many applications are often misconfigured or not updated, due to the perception that they are only used &amp;ldquo;internally&amp;rdquo; and therefore no threat exists.</description>
+    </item>
+    
+    <item>
+      <title>Review Webpage Content for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:57:27 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/</guid>
+      <description>Review Webpage Content for Information Leakage    ID     WSTG-INFO-05    Summary It is very common, and even recommended, for programmers to include detailed comments and metadata on their source code. However, comments and metadata included into the HTML code might reveal internal information that should not be available to potential attackers. Comments and metadata review should be done in order to determine if any information is being leaked.</description>
+    </item>
+    
+    <item>
+      <title>Identify Application Entry Points</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/</link>
+      <pubDate>Mon, 14 Dec 2020 16:59:04 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/</guid>
+      <description>Identify Application Entry Points    ID     WSTG-INFO-06    Summary Enumerating the application and its attack surface is a key precursor before any thorough testing can be undertaken, as it allows the tester to identify likely areas of weakness. This section aims to help identify and map out areas within the application that should be investigated once enumeration and mapping have been completed.</description>
+    </item>
+    
+    <item>
+      <title>Map Execution Paths Through Application</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/</link>
+      <pubDate>Mon, 14 Dec 2020 17:01:03 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/</guid>
+      <description>Map Execution Paths Through Application    ID     WSTG-INFO-07    Summary Before commencing security testing, understanding the structure of the application is paramount. Without a thorough understanding of the layout of the application, it is unlikely that it will be tested thoroughly.
+Test Objectives  Map the target application and understand the principal workflows.  How to Test In black-box testing it is extremely difficult to test the entire codebase.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Application Framework</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/</link>
+      <pubDate>Mon, 14 Dec 2020 17:02:15 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/</guid>
+      <description>Fingerprint Web Application Framework    ID     WSTG-INFO-08    Summary There is nothing new under the sun, and nearly every web application that one may think of developing has already been developed. With the vast number of free and Open Source software projects that are actively developed and deployed around the world, it is very likely that an application security test will face a target that is entirely or partly dependent on these well known applications or frameworks (e.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Application</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/</link>
+      <pubDate>Mon, 14 Dec 2020 17:05:18 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/</guid>
+      <description>Fingerprint Web Application    ID     WSTG-INFO-09    This content has been merged into: Fingerprint Web Application Framework.</description>
+    </item>
+    
+    <item>
+      <title>Map Application Architecture</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/</link>
+      <pubDate>Mon, 14 Dec 2020 17:06:31 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/</guid>
+      <description>Map Application Architecture    ID     WSTG-INFO-10    Summary The complexity of interconnected and heterogeneous web infrastructure can include hundreds of web applications and makes configuration management and review a fundamental step in testing and deploying every single application. In fact it takes only a single vulnerability to undermine the security of the entire infrastructure, and even small and seemingly unimportant problems may evolve into severe risks for another application in the same infrastructure.</description>
+    </item>
+    
+    <item>
+      <title>Test Network Infrastructure Configuration</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/</link>
+      <pubDate>Mon, 14 Dec 2020 17:11:04 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/</guid>
+      <description>Test Network Infrastructure Configuration    ID     WSTG-CONF-01    Summary The intrinsic complexity of interconnected and heterogeneous web server infrastructure, which can include hundreds of web applications, makes configuration management and review a fundamental step in testing and deploying every single application. It takes only a single vulnerability to undermine the security of the entire infrastructure, and even small and seemingly unimportant problems may evolve into severe risks for another application on the same server.</description>
+    </item>
+    
+    <item>
+      <title>Test Application Platform Configuration</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/</link>
+      <pubDate>Mon, 14 Dec 2020 17:12:36 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/</guid>
+      <description>Test Application Platform Configuration    ID     WSTG-CONF-02    Summary Proper configuration of the single elements that make up an application architecture is important in order to prevent mistakes that might compromise the security of the whole architecture.
+Configuration review and testing is a critical task in creating and maintaining an architecture. This is because many different systems will be usually provided with generic configurations that might not be suited to the task they will perform on the specific site they&amp;rsquo;re installed on.</description>
+    </item>
+    
+    <item>
+      <title>Test File Extensions Handling for Sensitive Information</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/</link>
+      <pubDate>Mon, 14 Dec 2020 17:19:34 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/</guid>
+      <description>Test File Extensions Handling for Sensitive Information    ID     WSTG-CONF-03    Summary File extensions are commonly used in web servers to easily determine which technologies, languages and plugins must be used to fulfill the web request. While this behavior is consistent with RFCs and Web Standards, using standard file extensions provides the penetration tester useful information about the underlying technologies used in a web appliance and greatly simplifies the task of determining the attack scenario to be used on particular technologies.</description>
+    </item>
+    
+    <item>
+      <title>Review Old Backup and Unreferenced Files for Sensitive Information</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/</link>
+      <pubDate>Mon, 14 Dec 2020 17:21:00 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/</guid>
+      <description>Review Old Backup and Unreferenced Files for Sensitive Information    ID     WSTG-CONF-04    Summary While most of the files within a web server are directly handled by the server itself, it isn&amp;rsquo;t uncommon to find unreferenced or forgotten files that can be used to obtain important information about the infrastructure or the credentials.
+Most common scenarios include the presence of renamed old versions of modified files, inclusion files that are loaded into the language of choice and can be downloaded as source, or even automatic or manual backups in form of compressed archives.</description>
+    </item>
+    
+    <item>
+      <title>Enumerate Infrastructure and Application Admin Interfaces</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/</link>
+      <pubDate>Mon, 14 Dec 2020 17:22:15 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/</guid>
+      <description>Enumerate Infrastructure and Application Admin Interfaces    ID     WSTG-CONF-05    Summary Administrator interfaces may be present in the application or on the application server to allow certain users to undertake privileged activities on the site. Tests should be undertaken to reveal if and how this privileged functionality can be accessed by an unauthorized or standard user.
+An application may require an administrator interface to enable a privileged user to access functionality that may make changes to how the site functions.</description>
+    </item>
+    
+    <item>
+      <title>Test HTTP Methods</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/</link>
+      <pubDate>Mon, 14 Dec 2020 17:23:41 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/</guid>
+      <description>Test HTTP Methods    ID     WSTG-CONF-06    Summary HTTP offers a number of methods that can be used to perform actions on the web server (the HTTP 1.1 standard refers to them as methods but they are also commonly described as verbs). While GET and POST are by far the most common methods that are used to access information provided by a web server, HTTP allows several other (and somewhat less known) methods.</description>
+    </item>
+    
+    <item>
+      <title>Test HTTP Strict Transport Security</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/</link>
+      <pubDate>Mon, 14 Dec 2020 17:24:42 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/</guid>
+      <description>Test HTTP Strict Transport Security    ID     WSTG-CONF-07    Summary The HTTP Strict Transport Security (HSTS) feature lets a web application inform the browser through the use of a special response header that it should never establish a connection to the specified domain servers using un-encrypted HTTP. Instead, it should automatically establish all connection requests to access the site through HTTPS. It also prevents users from overriding certificate errors.</description>
+    </item>
+    
+    <item>
+      <title>Test RIA Cross Domain Policy</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/</link>
+      <pubDate>Mon, 14 Dec 2020 17:25:43 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/</guid>
+      <description>Test RIA Cross Domain Policy    ID     WSTG-CONF-08    Summary Rich Internet Applications (RIA) have adopted Adobe&amp;rsquo;s crossdomain.xml policy files to allow for controlled cross domain access to data and service consumption using technologies such as Oracle Java, Silverlight, and Adobe Flash. Therefore, a domain can grant remote access to its services from a different domain. However, often the policy files that describe the access restrictions are poorly configured.</description>
+    </item>
+    
+    <item>
+      <title>Test File Permission</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/</link>
+      <pubDate>Mon, 14 Dec 2020 17:26:53 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/</guid>
+      <description>Test File Permission    ID     WSTG-CONF-09    Summary When a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution, or sensitive user data.</description>
+    </item>
+    
+    <item>
+      <title>Test for Subdomain Takeover</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/</link>
+      <pubDate>Mon, 14 Dec 2020 17:27:56 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/</guid>
+      <description>Test for Subdomain Takeover    ID     WSTG-CONF-10    Summary A successful exploitation of this kind of vulnerability allows an adversary to claim and take control of the victim&amp;rsquo;s subdomain. This attack relies on the following:
+ The victim&amp;rsquo;s external DNS server subdomain record is configured to point to a non-existing or non-active resource/external service/endpoint. The proliferation of XaaS (Anything as a Service) products and public cloud services offer a lot of potential targets to consider.</description>
+    </item>
+    
+    <item>
+      <title>Test Cloud Storage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/</link>
+      <pubDate>Mon, 14 Dec 2020 17:30:42 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/</guid>
+      <description>Test Cloud Storage    ID     WSTG-CONF-11    Summary Cloud storage services facilitate web application and services to store and access objects in the storage service. Improper access control configuration, however, may result in sensitive information exposure, data being tampered, or unauthorized access.
+A known example is where an Amazon S3 bucket is misconfigured, although the other cloud storage services may also be exposed to similar risks.</description>
+    </item>
+    
+    <item>
+      <title>Test Role Definitions</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/</link>
+      <pubDate>Mon, 14 Dec 2020 18:47:52 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/</guid>
+      <description>Test Role Definitions    ID     WSTG-IDNT-01    Summary Applications have several types of functionalities and services, and those require access permissions based on the needs of the user. That user could be:
+ an administrator, where they manage the application functionalities. an auditor, where they review the application transactions and provide a detailed report. a support engineer, where they help customers debug and fix issues on their accounts.</description>
+    </item>
+    
+    <item>
+      <title>Test User Registration Process</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/</link>
+      <pubDate>Mon, 14 Dec 2020 18:48:52 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/</guid>
+      <description>Test User Registration Process    ID     WSTG-IDNT-02    Summary Some websites offer a user registration process that automates (or semi-automates) the provisioning of system access to users. The identity requirements for access vary from positive identification to none at all, depending on the security requirements of the system. Many public applications completely automate the registration and provisioning process because the size of the user base makes it impossible to manage manually.</description>
+    </item>
+    
+    <item>
+      <title>Test Account Provisioning Process</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/</link>
+      <pubDate>Mon, 14 Dec 2020 18:49:45 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/</guid>
+      <description>Test Account Provisioning Process    ID     WSTG-IDNT-03    Summary The provisioning of accounts presents an opportunity for an attacker to create a valid account without application of the proper identification and authorization process.
+Test Objectives  Verify which accounts may provision other accounts and of what type.  How to Test Determine which roles are able to provision users and what sort of accounts they can provision.</description>
+    </item>
+    
+    <item>
+      <title>Testing for Account Enumeration and Guessable User Account</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/</link>
+      <pubDate>Mon, 14 Dec 2020 18:50:40 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/</guid>
+      <description>Testing for Account Enumeration and Guessable User Account    ID     WSTG-IDNT-04    Summary The scope of this test is to verify if it is possible to collect a set of valid usernames by interacting with the authentication mechanism of the application. This test will be useful for brute force testing, in which the tester verifies if, given a valid username, it is possible to find the corresponding password.</description>
+    </item>
+    
+    <item>
+      <title>Testing for Weak or Unenforced Username Policy</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/</link>
+      <pubDate>Mon, 14 Dec 2020 18:51:50 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/</guid>
+      <description>Testing for Weak or Unenforced Username Policy    ID     WSTG-IDNT-05    Summary User account names are often highly structured (e.g. Joe Bloggs account name is jbloggs and Fred Nurks account name is fnurks) and valid account names can easily be guessed.
+Test Objectives  Determine whether a consistent account name structure renders the application vulnerable to account enumeration. Determine whether the application&amp;rsquo;s error messages permit account enumeration.</description>
+    </item>
+    
+  </channel>
+</rss>

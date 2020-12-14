@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Information Gathering on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/</link>
+    <description>Recent content in Information Gathering on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 16:31:04 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conduct Search Engine Descovery Reconnaissanse for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:37:51 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/</guid>
+      <description>Conduct Search Engine Discovery Reconnaissance for Information Leakage    ID     WSTG-INFO-01    Summary In order for search engines to work, computer programs (or robots) regularly fetch data (referred to as crawling from billions of pages on the web. These programs find web content and functionality by following links from other pages, or by looking at sitemaps. If a website uses a special file called robots.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Server</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/</link>
+      <pubDate>Mon, 14 Dec 2020 16:41:10 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/</guid>
+      <description>Fingerprint Web Server    ID     WSTG-INFO-02    Summary Web server fingerprinting is the task of identifying the type and version of web server that a target is running on. While web server fingerprinting is often encapsulated in automated testing tools, it is important for researchers to understand the fundamentals of how these tools attempt to identify software, and why this is useful.</description>
+    </item>
+    
+    <item>
+      <title>Review Webserver Metafiles for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:52:16 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/</guid>
+      <description>Review Webserver Metafiles for Information Leakage    ID     WSTG-INFO-03    Summary This section describes how to test various metadata files for information leakage of the web application&amp;rsquo;s path(s), or functionality. Furthermore, the list of directories that are to be avoided by Spiders, Robots, or Crawlers can also be created as a dependency for Map execution paths through application. Other information may also be collected to identify attack surface, technology details, or for use in social engineering engagement.</description>
+    </item>
+    
+    <item>
+      <title>Enumerate Applications on Webserver</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/</link>
+      <pubDate>Mon, 14 Dec 2020 16:55:34 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/</guid>
+      <description>Enumerate Applications on Webserver    ID     WSTG-INFO-04    Summary A paramount step in testing for web application vulnerabilities is to find out which particular applications are hosted on a web server. Many applications have known vulnerabilities and known attack strategies that can be exploited in order to gain remote control or to exploit data. In addition, many applications are often misconfigured or not updated, due to the perception that they are only used &amp;ldquo;internally&amp;rdquo; and therefore no threat exists.</description>
+    </item>
+    
+    <item>
+      <title>Review Webpage Content for Information Leakage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/</link>
+      <pubDate>Mon, 14 Dec 2020 16:57:27 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/</guid>
+      <description>Review Webpage Content for Information Leakage    ID     WSTG-INFO-05    Summary It is very common, and even recommended, for programmers to include detailed comments and metadata on their source code. However, comments and metadata included into the HTML code might reveal internal information that should not be available to potential attackers. Comments and metadata review should be done in order to determine if any information is being leaked.</description>
+    </item>
+    
+    <item>
+      <title>Identify Application Entry Points</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/</link>
+      <pubDate>Mon, 14 Dec 2020 16:59:04 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/</guid>
+      <description>Identify Application Entry Points    ID     WSTG-INFO-06    Summary Enumerating the application and its attack surface is a key precursor before any thorough testing can be undertaken, as it allows the tester to identify likely areas of weakness. This section aims to help identify and map out areas within the application that should be investigated once enumeration and mapping have been completed.</description>
+    </item>
+    
+    <item>
+      <title>Map Execution Paths Through Application</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/</link>
+      <pubDate>Mon, 14 Dec 2020 17:01:03 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/</guid>
+      <description>Map Execution Paths Through Application    ID     WSTG-INFO-07    Summary Before commencing security testing, understanding the structure of the application is paramount. Without a thorough understanding of the layout of the application, it is unlikely that it will be tested thoroughly.
+Test Objectives  Map the target application and understand the principal workflows.  How to Test In black-box testing it is extremely difficult to test the entire codebase.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Application Framework</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/</link>
+      <pubDate>Mon, 14 Dec 2020 17:02:15 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/</guid>
+      <description>Fingerprint Web Application Framework    ID     WSTG-INFO-08    Summary There is nothing new under the sun, and nearly every web application that one may think of developing has already been developed. With the vast number of free and Open Source software projects that are actively developed and deployed around the world, it is very likely that an application security test will face a target that is entirely or partly dependent on these well known applications or frameworks (e.</description>
+    </item>
+    
+    <item>
+      <title>Fingerprint Web Application</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/</link>
+      <pubDate>Mon, 14 Dec 2020 17:05:18 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/</guid>
+      <description>Fingerprint Web Application    ID     WSTG-INFO-09    This content has been merged into: Fingerprint Web Application Framework.</description>
+    </item>
+    
+    <item>
+      <title>Map Application Architecture</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/</link>
+      <pubDate>Mon, 14 Dec 2020 17:06:31 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/</guid>
+      <description>Map Application Architecture    ID     WSTG-INFO-10    Summary The complexity of interconnected and heterogeneous web infrastructure can include hundreds of web applications and makes configuration management and review a fundamental step in testing and deploying every single application. In fact it takes only a single vulnerability to undermine the security of the entire infrastructure, and even small and seemingly unimportant problems may evolve into severe risks for another application in the same infrastructure.</description>
+    </item>
+    
+  </channel>
+</rss>

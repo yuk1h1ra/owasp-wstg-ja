@@ -1,103 +1,143 @@
-# hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
+baseURL = "https://yuk1h1ra.github.io/owasp-wstg-ja/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+publishDir = "docs"
 
-baseURL = 'https://yuk1h1ra.github.io/owasp-wstg-ja/'
-title = 'OWASP WSTG JP'
-theme = 'book'
-publishDir = 'docs'
-
-# Book configuration
-disablePathToLower = true
-enableGitInfo = true
-
-# Needed for mermaid/katex shortcodes
-[markup]
-[markup.goldmark.renderer]
-  unsafe = true
-
-[markup.tableOfContents]
-  startLevel = 1
-
-# Multi-lingual mode config
-# There are different options to translate files
-# See https://gohugo.io/content-management/multilingual/#translation-by-filename
-# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-[languages]
-[languages.en]
-  languageName = 'English'
-  contentDir = 'content'
-  weight = 1
-
-[languages.ja]
-  languageName = 'Japanese'
-  contentDir = 'content.ja'
-  weight = 2
-
-[menu]
-# [[menu.before]]
-[[menu.after]]
-  name = "Github"
-  url = "https://github.com/yuk1h1ra/owasp-wstg-ja"
-  weight = 10
-
-# [[menu.after]]
-#   name = "Hugo Themes"
-#   url = "https://themes.gohugo.io/hugo-book/"
-#   weight = 20
+title = "OWASP WSTG JP"
+theme = "hugo-theme-learn"
+# themesdir = "./themes/hugo-theme-learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
 
 [params]
-  # (Optional, default light) Sets color theme: light, dark or auto.
-  # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme = 'light'
+  editURL = "https://github.com/yuk1h1ra/owasp-wstg-ja/edit/master/content/"
+  description = "Unofficial japanese translation of OWASP Web Security Testing Guide"
+  author = "yuk1h1ra"
+  showVisitedLinks = false
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+  titleSeparator = "::"
+  themeVariant = "blue"
 
-  # (Optional, default true) Controls table of contents visibility on right side of pages.
-  # Start and end levels can be controlled with markup.tableOfContents setting.
-  # You can also specify this parameter per page in front matter.
-  BookToC = true
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
-  # (Optional, default none) Set the path to a logo for the book. If the logo is
-  # /static/logo.png then the path would be logo.png
-  # BookLogo = 'logo.png'
+[Languages]
+[Languages.en]
+title = "Unofficial japanese translation of OWASP Web Security Testing Guide"
+weight = 1
+languageName = "English"
+landingPageURL = "/owasp-wstg-ja/en"
+landingPageName = "<i class='fas fa-home'></i> Home"
 
-  # (Optional, default none) Set leaf bundle to render as side menu
-  # When not specified file structure and weights will be used
-  BookMenuBundle = '/menu'
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/yuk1h1ra/owasp-wstg-ja"
+weight = 10
 
-  # (Optional, default docs) Specify root page to render child pages as menu.
-  # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
-  # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection = 'docs'
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Showcases"
+url = "showcase"
+weight = 11
 
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/yuk1h1ra/owasp-wstg-ja'
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
 
-  # Enable "Edit this page" links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Edit path must point to root directory of repo.
-  BookEditPath = 'edit/master'
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
 
-  # Configure the date format used on the pages
-  # - In git information
-  # - In blog posts
-  BookDateFormat = 'January 2, 2006'
+[Languages.ja]
+title = "OWASP Web Security Testing Guideの非公式日本語訳"
+weight = 2
+languageName = "日本語"
+landingPageURL = "/owasp-wstg-ja/ja"
+landingPageName = "<i class='fas fa-home'></i> ホーム"
 
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch = true
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
+identifier = "ds"
+url = "https://github.com/yuk1h1ra/owasp-wstg-ja"
+weight = 10
 
-  # (Optional, default true) Enables comments template on pages
-  # By default partals/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
-  BookComments = true
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Vitrine"
+url = "/showcase"
+weight = 11
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
-  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
-  # Theme will print warning if page referenced in markdown does not exists.
-  BookPortableLinks = true
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Documentation Hugo"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker = true
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+url = "/credits"
+weight = 30
+
+# [Languages.fr]
+# title = "Documentation du thème Hugo Learn"
+# weight = 2
+# languageName = "Français"
+# landingPageURL = "/fr"
+# landingPageName = "<i class='fas fa-home'></i> Accueil"
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
+# identifier = "ds"
+# url = "https://github.com/matcornic/hugo-theme-learn"
+# weight = 10
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-camera'></i> Vitrine"
+# url = "/showcase"
+# weight = 11
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bookmark'></i> Documentation Hugo"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+# [[Languages.fr.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+# url = "/credits"
+# weight = 30
+
+# [Languages.zh]
+# title = "Hugo 主题的 Learn 文档"
+# weight = 3
+# languageName = "简体中文"
+# landingPageURL = "/zh"
+# landingPageName = "<i class='fas fa-home'></i> 家"
+
+# [[Languages.zh.menu.shortcuts]]
+# name = "<i class='fab fa-fw fa-github'></i> GitHub 仓库"
+# identifier = "ds"
+# url = "https://github.com/matcornic/hugo-theme-learn"
+# weight = 10
+
+# [[Languages.zh.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-camera'></i> 展示区"
+# url = "/showcase"
+# weight = 11
+
+# [[Languages.zh.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bookmark'></i> Hugo 文档"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
+
+# [[Languages.zh.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bullhorn'></i> 鸣谢"
+# url = "/credits"
+# weight = 30

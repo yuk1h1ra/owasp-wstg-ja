@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configuration and Deployment Management Testing on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/</link>
+    <description>Recent content in Configuration and Deployment Management Testing on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 17:08:58 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Network Infrastructure Configuration</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/</link>
+      <pubDate>Mon, 14 Dec 2020 17:11:04 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/</guid>
+      <description>Test Network Infrastructure Configuration    ID     WSTG-CONF-01    Summary The intrinsic complexity of interconnected and heterogeneous web server infrastructure, which can include hundreds of web applications, makes configuration management and review a fundamental step in testing and deploying every single application. It takes only a single vulnerability to undermine the security of the entire infrastructure, and even small and seemingly unimportant problems may evolve into severe risks for another application on the same server.</description>
+    </item>
+    
+    <item>
+      <title>Test Application Platform Configuration</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/</link>
+      <pubDate>Mon, 14 Dec 2020 17:12:36 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/</guid>
+      <description>Test Application Platform Configuration    ID     WSTG-CONF-02    Summary Proper configuration of the single elements that make up an application architecture is important in order to prevent mistakes that might compromise the security of the whole architecture.
+Configuration review and testing is a critical task in creating and maintaining an architecture. This is because many different systems will be usually provided with generic configurations that might not be suited to the task they will perform on the specific site they&amp;rsquo;re installed on.</description>
+    </item>
+    
+    <item>
+      <title>Test File Extensions Handling for Sensitive Information</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/</link>
+      <pubDate>Mon, 14 Dec 2020 17:19:34 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/</guid>
+      <description>Test File Extensions Handling for Sensitive Information    ID     WSTG-CONF-03    Summary File extensions are commonly used in web servers to easily determine which technologies, languages and plugins must be used to fulfill the web request. While this behavior is consistent with RFCs and Web Standards, using standard file extensions provides the penetration tester useful information about the underlying technologies used in a web appliance and greatly simplifies the task of determining the attack scenario to be used on particular technologies.</description>
+    </item>
+    
+    <item>
+      <title>Review Old Backup and Unreferenced Files for Sensitive Information</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/</link>
+      <pubDate>Mon, 14 Dec 2020 17:21:00 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/</guid>
+      <description>Review Old Backup and Unreferenced Files for Sensitive Information    ID     WSTG-CONF-04    Summary While most of the files within a web server are directly handled by the server itself, it isn&amp;rsquo;t uncommon to find unreferenced or forgotten files that can be used to obtain important information about the infrastructure or the credentials.
+Most common scenarios include the presence of renamed old versions of modified files, inclusion files that are loaded into the language of choice and can be downloaded as source, or even automatic or manual backups in form of compressed archives.</description>
+    </item>
+    
+    <item>
+      <title>Enumerate Infrastructure and Application Admin Interfaces</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/</link>
+      <pubDate>Mon, 14 Dec 2020 17:22:15 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/</guid>
+      <description>Enumerate Infrastructure and Application Admin Interfaces    ID     WSTG-CONF-05    Summary Administrator interfaces may be present in the application or on the application server to allow certain users to undertake privileged activities on the site. Tests should be undertaken to reveal if and how this privileged functionality can be accessed by an unauthorized or standard user.
+An application may require an administrator interface to enable a privileged user to access functionality that may make changes to how the site functions.</description>
+    </item>
+    
+    <item>
+      <title>Test HTTP Methods</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/</link>
+      <pubDate>Mon, 14 Dec 2020 17:23:41 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/</guid>
+      <description>Test HTTP Methods    ID     WSTG-CONF-06    Summary HTTP offers a number of methods that can be used to perform actions on the web server (the HTTP 1.1 standard refers to them as methods but they are also commonly described as verbs). While GET and POST are by far the most common methods that are used to access information provided by a web server, HTTP allows several other (and somewhat less known) methods.</description>
+    </item>
+    
+    <item>
+      <title>Test HTTP Strict Transport Security</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/</link>
+      <pubDate>Mon, 14 Dec 2020 17:24:42 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/</guid>
+      <description>Test HTTP Strict Transport Security    ID     WSTG-CONF-07    Summary The HTTP Strict Transport Security (HSTS) feature lets a web application inform the browser through the use of a special response header that it should never establish a connection to the specified domain servers using un-encrypted HTTP. Instead, it should automatically establish all connection requests to access the site through HTTPS. It also prevents users from overriding certificate errors.</description>
+    </item>
+    
+    <item>
+      <title>Test RIA Cross Domain Policy</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/</link>
+      <pubDate>Mon, 14 Dec 2020 17:25:43 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/</guid>
+      <description>Test RIA Cross Domain Policy    ID     WSTG-CONF-08    Summary Rich Internet Applications (RIA) have adopted Adobe&amp;rsquo;s crossdomain.xml policy files to allow for controlled cross domain access to data and service consumption using technologies such as Oracle Java, Silverlight, and Adobe Flash. Therefore, a domain can grant remote access to its services from a different domain. However, often the policy files that describe the access restrictions are poorly configured.</description>
+    </item>
+    
+    <item>
+      <title>Test File Permission</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/</link>
+      <pubDate>Mon, 14 Dec 2020 17:26:53 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/</guid>
+      <description>Test File Permission    ID     WSTG-CONF-09    Summary When a resource is given a permissions setting that provides access to a wider range of actors than required, it could lead to the exposure of sensitive information, or the modification of that resource by unintended parties. This is especially dangerous when the resource is related to program configuration, execution, or sensitive user data.</description>
+    </item>
+    
+    <item>
+      <title>Test for Subdomain Takeover</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/</link>
+      <pubDate>Mon, 14 Dec 2020 17:27:56 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/</guid>
+      <description>Test for Subdomain Takeover    ID     WSTG-CONF-10    Summary A successful exploitation of this kind of vulnerability allows an adversary to claim and take control of the victim&amp;rsquo;s subdomain. This attack relies on the following:
+ The victim&amp;rsquo;s external DNS server subdomain record is configured to point to a non-existing or non-active resource/external service/endpoint. The proliferation of XaaS (Anything as a Service) products and public cloud services offer a lot of potential targets to consider.</description>
+    </item>
+    
+    <item>
+      <title>Test Cloud Storage</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/</link>
+      <pubDate>Mon, 14 Dec 2020 17:30:42 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/</guid>
+      <description>Test Cloud Storage    ID     WSTG-CONF-11    Summary Cloud storage services facilitate web application and services to store and access objects in the storage service. Improper access control configuration, however, may result in sensitive information exposure, data being tampered, or unauthorized access.
+A known example is where an Amazon S3 bucket is misconfigured, although the other cloud storage services may also be exposed to similar risks.</description>
+    </item>
+    
+  </channel>
+</rss>

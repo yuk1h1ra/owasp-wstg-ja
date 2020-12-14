@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foreword on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/0-foreword/</link>
+    <description>Recent content in Foreword on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 15:49:03 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/0-foreword/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.79.0" />
+    <meta name="description" content="Unofficial japanese translation of OWASP Web Security Testing Guide">
+<meta name="author" content="yuk1h1ra">
+
+    <link rel="icon" href="/owasp-wstg-ja/images/favicon.png" type="image/png">
+
+    <title>Testing for Account Enumeration and Guessable User Account :: Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+
+    
+    <link href="/owasp-wstg-ja/css/nucleus.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/fontawesome-all.min.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/hybrid.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/featherlight.min.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/perfect-scrollbar.min.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/auto-complete.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/atom-one-dark-reasonable.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/theme.css?1607939722" rel="stylesheet">
+    <link href="/owasp-wstg-ja/css/hugo-theme.css?1607939722" rel="stylesheet">
+    
+    <link href="/owasp-wstg-ja/css/theme-blue.css?1607939722" rel="stylesheet">
+    
+    
+
+    <script src="/owasp-wstg-ja/js/jquery-3.3.1.min.js?1607939722"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href='/owasp-wstg-ja/en'>
+  <svg id="grav-logo" style="width:100%; height:100%;" viewBox="0 0 504 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path d="M235.832,71.564l-7.98,-0.001c-1.213,0.001 -2.197,0.987 -2.197,2.204l0,15.327l-0.158,0.132c-4.696,3.962 -10.634,6.14 -16.719,6.14c-14.356,0 -26.034,-11.68 -26.034,-26.037c0,-14.358 11.678,-26.035 26.034,-26.035c5.582,0 10.919,1.767 15.437,5.113c0.877,0.649 2.093,0.56 2.866,-0.211l5.69,-5.69c0.444,-0.442 0.675,-1.055 0.639,-1.681c-0.034,-0.627 -0.336,-1.206 -0.828,-1.597c-6.76,-5.363 -15.214,-8.314 -23.805,-8.314c-21.18,0 -38.414,17.233 -38.414,38.415c0,21.183 17.234,38.415 38.414,38.415c10.937,0 21.397,-4.705 28.698,-12.914c0.358,-0.403 0.556,-0.921 0.556,-1.46l0,-19.603c0,-1.217 -0.985,-2.203 -2.2,-2.203"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M502.794,34.445c-0.408,-0.616 -1.1,-0.989 -1.838,-0.989l-8.684,0c-0.879,0 -1.673,0.522 -2.022,1.329l-24.483,56.839l-24.92,-56.852c-0.352,-0.799 -1.142,-1.316 -2.012,-1.316l-8.713,0c-0.744,0 -1.44,0.373 -1.843,0.995c-0.408,0.623 -0.476,1.408 -0.174,2.09l30.186,68.858c0.352,0.799 1.143,1.317 2.017,1.317l10.992,0c0.879,0 1.673,-0.527 2.021,-1.329l29.655,-68.861c0.289,-0.68 0.222,-1.461 -0.182,-2.081"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M388.683,34.772c-0.353,-0.798 -1.142,-1.316 -2.017,-1.316l-10.988,0c-0.879,0 -1.673,0.522 -2.021,1.329l-29.655,68.861c-0.294,0.675 -0.226,1.46 0.182,2.077c0.407,0.619 1.096,0.993 1.838,0.993l8.684,0c0.879,0 1.673,-0.526 2.022,-1.329l24.478,-56.842l24.92,56.854c0.353,0.798 1.143,1.317 2.013,1.317l8.717,0c0.744,0 1.44,-0.374 1.843,-0.993c0.408,-0.624 0.471,-1.41 0.174,-2.094l-30.19,-68.857Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M309.196,81.525l0.476,-0.229c8.675,-4.191 14.279,-13.087 14.279,-22.667c0,-13.881 -11.295,-25.174 -25.176,-25.174l-31.863,0c-1.214,0 -2.199,0.988 -2.199,2.202l0,68.855c0,1.219 0.985,2.204 2.199,2.204l7.979,0c1.214,0 2.2,-0.985 2.2,-2.204l0,-58.679l21.684,0c7.059,0 12.799,5.739 12.799,12.796c0,5.885 -3.996,10.989 -9.728,12.408c-1.032,0.261 -2.064,0.393 -3.071,0.393l-7.977,0c-0.829,0 -1.585,0.467 -1.959,1.205c-0.378,0.74 -0.305,1.625 0.187,2.296l22.62,30.884c0.412,0.566 1.07,0.901 1.771,0.901l9.915,0c0.827,0 1.587,-0.467 1.96,-1.207c0.378,-0.742 0.302,-1.629 -0.186,-2.296l-15.91,-21.688Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M107.191,80.969c-7.255,-4.794 -11.4,-8.845 -15.011,-16.109c-2.47,4.977 -8.236,12.376 -17.962,18.198c-4.856,15.106 -27.954,44.015 -35.43,39.916c-2.213,-1.212 -2.633,-2.808 -2.133,-4.456c0.536,-4.129 9.078,-13.62 9.078,-13.62c0,0 0.18,1.992 2.913,6.187c-3.609,-11.205 5.965,-25.031 8.5,-29.738c3.985,-1.269 4.274,-6.387 4.274,-6.387c0.255,-7.909 -3.278,-13.635 -6.701,-17.059c2.459,3.002 3.255,7.539 3.372,11.694l0,0.023c0.012,0.469 0.012,0.93 0.011,1.39c-0.117,3.439 -1.157,8.19 -3.383,8.19l0.006,0.03c-2.289,-0.098 -5.115,0.391 -7.639,1.18l-5.582,1.334c0,0 2.977,-0.136 4.584,1.252c-1.79,2.915 -5.769,6.533 -10.206,8.588c-6.457,2.995 -8.312,-2.964 -5.034,-6.838c0.805,-0.946 1.618,-1.745 2.387,-2.399c-0.495,-0.513 -0.807,-1.198 -0.889,-2.068c-0.001,-0.005 -0.004,-0.009 -0.005,-0.013c-0.45,-1.977 -0.202,-4.543 2.596,-8.623c0.551,-0.863 1.214,-1.748 2.007,-2.647c0.025,-0.031 0.046,-0.059 0.072,-0.089c0.034,-0.042 0.072,-0.08 0.108,-0.121c0.02,-0.023 0.039,-0.045 0.059,-0.068c0.2,-0.228 0.413,-0.45 0.639,-0.663c3.334,-3.414 8.599,-6.966 16.897,-10.152c9.675,-14.223 13.219,-16.89 13.219,-16.89c1.071,-1.096 2.943,-2.458 3.632,-2.805c-5.053,-8.781 -6.074,-21.158 -4.75,-24.493c-0.107,0.18 -0.206,0.365 -0.287,0.556c0.49,-1.143 0.819,-1.509 1.328,-2.111c1.381,-1.632 6.058,-2.488 7.737,0.971c0.895,1.844 1.063,4.232 1.034,6.023c-3.704,-0.193 -7.063,4.036 -7.063,4.036c0,0 3.067,-1.448 6.879,-1.473c0,0 1.015,0.883 2.283,2.542c-1.712,3.213 -4.524,10.021 -2.488,17.168c0.338,1.408 0.849,2.619 1.483,3.648c0.024,0.045 0.044,0.089 0.069,0.135c0.051,0.066 0.096,0.122 0.144,0.183c3.368,5.072 9.542,5.665 9.542,5.665c-2.906,-1.45 -5.274,-3.76 -6.816,-6.56c-0.8,-1.498 -1.291,-2.762 -1.592,-3.761c-1.636,-6.313 0.771,-9.999 2.149,-12.471c3.17,-4.917 8.944,-7.893 15.151,-7.185c8.712,0.995 14.968,8.862 13.973,17.571c-0.608,5.321 -3.781,9.723 -8.142,12.117c1.049,2.839 -0.073,6.28 -0.073,6.28c2.642,3.323 2.758,5.238 2.667,7.017c-3.357,-0.565 -6.618,1.701 -6.618,1.701c0,0 6.476,-1.546 10.238,1.81c2.446,2.631 4.078,5.009 5.051,6.766c1.393,2.505 7.859,2.683 7.123,7.188c-0.737,4.499 -5.669,4.542 -13.401,-0.56M69.571,0c-38.424,0 -69.571,31.148 -69.571,69.567c0,38.422 31.147,69.573 69.571,69.573c38.42,0 69.568,-31.151 69.568,-69.573c0,-38.42 -31.148,-69.567 -69.568,-69.567"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M73.796,51.693c0.813,-0.814 0.813,-2.134 0,-2.947c-0.815,-0.814 -2.133,-0.814 -2.947,0c-0.815,0.813 -0.815,2.133 0,2.947c0.814,0.813 2.132,0.813 2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M66.445,53.149c-0.814,0.813 -0.814,2.133 0,2.947c0.813,0.814 2.133,0.814 2.947,0c0.813,-0.814 0.813,-2.134 0,-2.947c-0.814,-0.813 -2.134,-0.813 -2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M79.231,54.233c-1.274,-1.274 -3.339,-1.272 -4.611,0l-2.713,2.712c-1.274,1.275 -1.274,3.339 0,4.612l2.978,2.978c1.274,1.275 3.338,1.274 4.611,0l2.712,-2.712c1.274,-1.274 1.274,-3.339 0,-4.612l-2.977,-2.978Z" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M95.759,41.445c-2.151,-2.578 1.869,-7.257 4.391,-4.463c4.645,5.148 -2.237,7.041 -4.391,4.463M105.004,44.132c3.442,-6.553 -1.427,-10.381 -4.773,-13.523c-5.36,-5.039 -10.706,-7.217 -16.811,-0.241c-6.102,6.977 -2.226,15.068 3.356,19.061c5.584,3.994 14.782,1.255 18.228,-5.297"
+      style="fill:#000;fill-rule:nonzero;"></path>
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/owasp-wstg-ja/js/lunr.min.js?1607939722"></script>
+<script type="text/javascript" src="/owasp-wstg-ja/js/auto-complete.js?1607939722"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/yuk1h1ra.github.io\/owasp-wstg-ja\/\/en";
+    
+</script>
+<script type="text/javascript" src="/owasp-wstg-ja/js/search.js?1607939722"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/0-foreword/" title="Foreword" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/0-foreword/">
+          Foreword
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/1-frontispiece/" title="Frontispiece" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/1-frontispiece/">
+          Frontispiece
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/2-introduction/" title="Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/2-introduction/">
+          Introduction
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/3-the_owasp_testing_framework/" title="The OWASP Testing Framework" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/3-the_owasp_testing_framework/">
+          The OWASP Testing Framework
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/" title="The Web Security Testing Framework" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/">
+        The Web Security Testing Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/" title="Penetration Testing Methodologies" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/">
+        Penetration Testing Methodologies
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/" title="Web Application Security Testing" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/4-web_application_security_testing/">
+          Web Application Security Testing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/00-introdution_and_objectives/" title="Introdution and Objectives" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/4-web_application_security_testing/00-introdution_and_objectives/">
+          Introdution and Objectives
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/" title="Information Gathering" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/">
+          Information Gathering
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/" title="Conduct Search Engine Descovery Reconnaissanse for Information Leakage" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/01-conduct_search_engine_descovery_reconnaissanse_for_information_leakage/">
+        Conduct Search Engine Descovery Reconnaissanse for Information Leakage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/" title="Fingerprint Web Server" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/02-fingerprint_web_server/">
+        Fingerprint Web Server
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/" title="Review Webserver Metafiles for Information Leakage" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/03-review_webserver_metafiles_for_information_leakage/">
+        Review Webserver Metafiles for Information Leakage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/" title="Enumerate Applications on Webserver" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/04-enumerate_applications_on_webserver/">
+        Enumerate Applications on Webserver
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/" title="Review Webpage Content for Information Leakage" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/05-review_webpage_content_for_information_leakage/">
+        Review Webpage Content for Information Leakage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/" title="Identify Application Entry Points" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/06-identify_application_entry_points/">
+        Identify Application Entry Points
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/" title="Map Execution Paths Through Application" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/07-map_execution_paths_through_application/">
+        Map Execution Paths Through Application
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/" title="Fingerprint Web Application Framework" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/08-fingerprint_web_application_framework/">
+        Fingerprint Web Application Framework
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/" title="Fingerprint Web Application" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/09-fingerprint_web_application/">
+        Fingerprint Web Application
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/" title="Map Application Architecture" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/01-information_gathering/10-map_application_architecture/">
+        Map Application Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/" title="Configuration and Deployment Management Testing" class="dd-item
+        
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/">
+          Configuration and Deployment Management Testing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/" title="Test Network Infrastructure Configuration" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/01-test_network_infrastructure_configuration/">
+        Test Network Infrastructure Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/" title="Test Application Platform Configuration" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/02-test_application_platform_configuration/">
+        Test Application Platform Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/" title="Test File Extensions Handling for Sensitive Information" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/03-test_file_extensions_handling_for_sensitive_information/">
+        Test File Extensions Handling for Sensitive Information
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/" title="Review Old Backup and Unreferenced Files for Sensitive Information" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/04-review_old_backup_and_unreferenced_files_for_sensitive_information/">
+        Review Old Backup and Unreferenced Files for Sensitive Information
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/" title="Enumerate Infrastructure and Application Admin Interfaces" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/05-enumerate_infrastructure_and_application_admin_interfaces/">
+        Enumerate Infrastructure and Application Admin Interfaces
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/" title="Test HTTP Methods" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/06-test_http_methods/">
+        Test HTTP Methods
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/" title="Test HTTP Strict Transport Security" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/07-test_http_strict_transport_security/">
+        Test HTTP Strict Transport Security
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/" title="Test RIA Cross Domain Policy" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/08-test_ria_cross_domain_policy/">
+        Test RIA Cross Domain Policy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/" title="Test File Permission" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/09-test_file_permission/">
+        Test File Permission
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/" title="Test for Subdomain Takeover" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/10-test_for_subdomain_takeover/">
+        Test for Subdomain Takeover
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/" title="Test Cloud Storage" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/02-configuration_and_deployment_management_testing/11-test_cloud_storage/">
+        Test Cloud Storage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/" title="Identity Management Testing" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/">
+          Identity Management Testing
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/" title="Test Role Definitions" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/">
+        Test Role Definitions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/" title="Test User Registration Process" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/">
+        Test User Registration Process
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/" title="Test Account Provisioning Process" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/">
+        Test Account Provisioning Process
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/" title="Testing for Account Enumeration and Guessable User Account" class="dd-item active">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/">
+        Testing for Account Enumeration and Guessable User Account
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/" title="Testing for Weak or Unenforced Username Policy" class="dd-item ">
+        <a href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/">
+        Testing for Weak or Unenforced Username Policy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://github.com/yuk1h1ra/owasp-wstg-ja"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/showcase"><i class='fas fa-fw fa-camera'></i> Showcases</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo Documentation</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://yuk1h1ra.github.io/en/owasp-wstg-ja/credits"><i class='fas fa-fw fa-bullhorn'></i> Credits</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/yuk1h1ra/owasp-wstg-ja/edit/master/content/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/owasp-wstg-ja/en/'>WSTG</a> > <a href='/owasp-wstg-ja/en/4-web_application_security_testing/'>Web Application Security Testing</a> > <a href='/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/'>Identity Management Testing</a> > Testing for Account Enumeration and Guessable User Account
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#test-objectives">Test Objectives</a></li>
+    <li><a href="#how-to-test">How to Test</a>
+      <ul>
+        <li><a href="#http-response-message">HTTP Response Message</a></li>
+        <li><a href="#other-ways-to-enumerate-users">Other Ways to Enumerate Users</a></li>
+        <li><a href="#guessing-users">Guessing Users</a></li>
+        <li><a href="#gray-box-testing">Gray-Box Testing</a></li>
+      </ul>
+    </li>
+    <li><a href="#remediation">Remediation</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Testing for Account Enumeration and Guessable User Account
+            </h1>
+          
+
+        
+
+
+<h1 id="testing-for-account-enumeration-and-guessable-user-account">Testing for Account Enumeration and Guessable User Account</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WSTG-IDNT-04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>The scope of this test is to verify if it is possible to collect a set of valid usernames by interacting with the authentication mechanism of the application. This test will be useful for brute force testing, in which the tester verifies if, given a valid username, it is possible to find the corresponding password.</p>
+<p>Often, web applications reveal when a username exists on system, either as a consequence of mis-configuration or as a design decision. For example, sometimes, when we submit wrong credentials, we receive a message that states that either the username is present on the system or the provided password is wrong. The information obtained can be used by an attacker to gain a list of users on system. This information can be used to attack the web application, for example, through a brute force or default username and password attack.</p>
+<p>The tester should interact with the authentication mechanism of the application to understand if sending particular requests causes the application to answer in different manners. This issue exists because the information released from web application or web server when the user provide a valid username is different than when they use an invalid one.</p>
+<p>In some cases, a message is received that reveals if the provided credentials are wrong because an invalid username or an invalid password was used. Sometimes, testers can enumerate the existing users by sending a username and an empty password.</p>
+<h2 id="test-objectives">Test Objectives</h2>
+<ul>
+<li>Review processes that pertain to user identification (<em>e.g.</em> registration, login, etc.).</li>
+<li>Enumerate users where possible through response analysis.</li>
+</ul>
+<h2 id="how-to-test">How to Test</h2>
+<p>In black-box testing, the tester knows nothing about the specific application, username, application logic, error messages on log in page, or password recovery facilities. If the application is vulnerable, the tester receives a response message that reveals, directly or indirectly, some information useful for enumerating users.</p>
+<h3 id="http-response-message">HTTP Response Message</h3>
+<h4 id="testing-for-valid-credentials">Testing for Valid Credentials</h4>
+<p>Record the server answer when you submit a valid user ID and valid password.</p>
+<blockquote>
+<p>Using a web proxy, notice the information retrieved from this successful authentication (HTTP 200 Response, length of the response).</p>
+</blockquote>
+<h4 id="testing-for-valid-user-with-wrong-password">Testing for Valid User with Wrong Password</h4>
+<p>Now, the tester should try to insert a valid user ID and a wrong password and record the error message generated by the application.</p>
+<blockquote>
+<p>The browser should display a message similar to the following one:</p>
+<p><img src="images/AuthenticationFailed.png" alt="Authentication Failed"><br>
+<em>Figure 4.3.4-1: Authentication Failed</em></p>
+<p>Unlike any message that reveals the existence of the user like the following:</p>
+<p><code>Login for User foo: invalid password</code></p>
+<p>Using a web proxy, notice the information retrieved from this unsuccessful authentication attempt (HTTP 200 Response, length of the response).</p>
+</blockquote>
+<h4 id="testing-for-a-nonexistent-username">Testing for a Nonexistent Username</h4>
+<p>Now, the tester should try to insert an invalid user ID and a wrong password and record the server answer (the tester should be confident that the username is not valid in the application). Record the error message and the server answer.</p>
+<blockquote>
+<p>If the tester enters a nonexistent user ID, they can receive a message similar to:</p>
+<p><img src="images/Userisnotactive.png" alt="This User is Not Active"><br>
+<em>Figure 4.3.4-3: This User is Not Active</em></p>
+<p>or a message like the following one:</p>
+<p><code>Login failed for User foo: invalid Account</code></p>
+<p>Generally the application should respond with the same error message and length to the different incorrect requests. If the responses are not the same, the tester should investigate and find out the key that creates a difference between the two responses. For example:</p>
+<ol>
+<li>Client request: Valid user/wrong password</li>
+<li>Server response: The password is not correct</li>
+<li>Client request: Wrong user/wrong password</li>
+<li>Server response: User not recognized</li>
+</ol>
+<p>The above responses let the client understand that for the first request they have a valid username. So they can interact with the application requesting a set of possible user IDs and observing the answer.</p>
+<p>Looking at the second server response, the tester understand in the same way that they don&rsquo;t hold a valid username. So they can interact in the same manner and create a list of valid user ID looking at the server answers.</p>
+</blockquote>
+<h3 id="other-ways-to-enumerate-users">Other Ways to Enumerate Users</h3>
+<p>Testers can enumerate users in several ways, such as:</p>
+<h4 id="analyzing-the-error-code-received-on-login-pages">Analyzing the Error Code Received on Login Pages</h4>
+<p>Some web application release a specific error code or message that we can analyze.</p>
+<h4 id="analyzing-urls-and-urls-re-directions">Analyzing URLs and URLs Re-directions</h4>
+<p>For example:</p>
+<ul>
+<li><code>http://www.foo.com/err.jsp?User=baduser&amp;Error=0</code></li>
+<li><code>http://www.foo.com/err.jsp?User=gooduser&amp;Error=2</code></li>
+</ul>
+<p>As is seen above, when a tester provides a user ID and password to the web application, they see a message indication that an error has occurred in the URL. In the first case they have provided a bad user ID and bad password. In the second, a good user ID and a bad password, so they can identify a valid user ID.</p>
+<h4 id="uri-probing">URI Probing</h4>
+<p>Sometimes a web server responds differently if it receives a request for an existing directory or not. For instance in some portals every user is associated with a directory. If testers try to access an existing directory they could receive a web server error.</p>
+<p>Some of the common errors received from web servers are:</p>
+<ul>
+<li>403 Forbidden error code</li>
+<li>404 Not found error code</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li><code>http://www.foo.com/account1</code> - we receive from web server: 403 Forbidden</li>
+<li><code>http://www.foo.com/account2</code> - we receive from web server: 404 file Not Found</li>
+</ul>
+<p>In the first case the user exists, but the tester cannot view the web page, in second case instead the user &ldquo;account2&rdquo; does not exist. By collecting this information testers can enumerate the users.</p>
+<h4 id="analyzing-web-page-titles">Analyzing Web Page Titles</h4>
+<p>Testers can receive useful information on Title of web page, where they can obtain a specific error code or messages that reveal if the problems are with the username or password.</p>
+<p>For instance, if a user cannot authenticate to an application and receives a web page whose title is similar to:</p>
+<ul>
+<li><code>Invalid user</code></li>
+<li><code>Invalid authentication</code></li>
+</ul>
+<h4 id="analyzing-a-message-received-from-a-recovery-facility">Analyzing a Message Received from a Recovery Facility</h4>
+<p>When we use a recovery facility (i.e. a forgotten password function) a vulnerable application might return a message that reveals if a username exists or not.</p>
+<p>For example, messages similar to the following:</p>
+<ul>
+<li><code>Invalid username: email address is not valid or the specified user was not found.</code></li>
+<li><code>Valid username: Your password has been successfully sent to the email address you registered with.</code></li>
+</ul>
+<h4 id="friendly-404-error-message">Friendly 404 Error Message</h4>
+<p>When we request a user within the directory that does not exist, we don&rsquo;t always receive 404 error code. Instead, we may receive &ldquo;200 ok&rdquo; with an image, in this case we can assume that when we receive the specific image the user does not exist. This logic can be applied to other web server response; the trick is a good analysis of web server and web application messages.</p>
+<h4 id="analyzing-response-times">Analyzing Response Times</h4>
+<p>As well as looking at the content of the responses, the time that the response take should also be considered. Particularly where the request causes an interaction with an external service (such as sending a forgotten password email), this can add several hundred milliseconds to the response, which can be used to determine whether the requested user is valid.</p>
+<h3 id="guessing-users">Guessing Users</h3>
+<p>In some cases the user IDs are created with specific policies of administrator or company. For example we can view a user with a user ID created in sequential order:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">CN000100
+CN000101
+...
+</code></pre></div><p>Sometimes the usernames are created with a REALM alias and then a sequential numbers:</p>
+<ul>
+<li>R1001 – user 001 for REALM1</li>
+<li>R2001 – user 001 for REALM2</li>
+</ul>
+<p>In the above sample we can create simple shell scripts that compose user IDs and submit a request with tool like wget to automate a web query to discern valid user IDs. To create a script we can also use Perl and curl.</p>
+<p>Other possibilities are: - user IDs associated with credit card numbers, or in general numbers with a pattern. - user IDs associated with real names, e.g. if Freddie Mercury has a user ID of &ldquo;fmercury&rdquo;, then you might guess Roger Taylor to have the user ID of &ldquo;rtaylor&rdquo;.</p>
+<p>Again, we can guess a username from the information received from an LDAP query or from Google information gathering, for example, from a specific domain. Google can help to find domain users through specific queries or through a simple shell script or tool.</p>
+<blockquote>
+<p>By enumerating user accounts, you risk locking out accounts after a predefined number of failed probes (based on application policy). Also, sometimes, your IP address can be banned by dynamic rules on the application firewall or Intrusion Prevention System.</p>
+</blockquote>
+<h3 id="gray-box-testing">Gray-Box Testing</h3>
+<h4 id="testing-for-authentication-error-messages">Testing for Authentication Error Messages</h4>
+<p>Verify that the application answers in the same manner for every client request that produces a failed authentication. For this issue the black-box testing and gray-box testing have the same concept based on the analysis of messages or error codes received from web application.</p>
+<blockquote>
+<p>The application should answer in the same manner for every failed attempt of authentication.</p>
+<p>For Example: <em>Credentials submitted are not valid</em></p>
+</blockquote>
+<h2 id="remediation">Remediation</h2>
+<p>Ensure the application returns consistent generic error messages in response to invalid account name, password or other user credentials entered during the log in process.</p>
+<p>Ensure default system accounts and test accounts are deleted prior to releasing the system into production (or exposing it to an untrusted network).</p>
+<h2 id="tools">Tools</h2>
+<ul>
+<li><a href="https://www.zaproxy.org">OWASP Zed Attack Proxy (ZAP)</a></li>
+<li><a href="https://curl.haxx.se/">curl</a></li>
+<li><a href="https://www.perl.org">PERL</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://securiteam.com/exploits/5ep0f0uquo/">Marco Mella, Sun Java Access &amp; Identity Manager Users enumeration</a></li>
+<li><a href="https://www.gnucitizen.org/blog/username-enumeration-vulnerabilities/">Username Enumeration Vulnerabilities</a></li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/" title="Test Account Provisioning Process"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/" title="Testing for Weak or Unenforced Username Policy" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/owasp-wstg-ja/js/clipboard.min.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/perfect-scrollbar.min.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/perfect-scrollbar.jquery.min.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/jquery.sticky.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/featherlight.min.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/highlight.pack.js?1607939722"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/owasp-wstg-ja/js/modernizr.custom-3.6.0.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/learn.js?1607939722"></script>
+    <script src="/owasp-wstg-ja/js/hugo-learn.js?1607939722"></script>
+    
+        
+            <script src="/owasp-wstg-ja/mermaid/mermaid.js?1607939722"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The OWASP Testing Framework on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/</link>
+    <description>Recent content in The OWASP Testing Framework on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 16:10:00 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Web Security Testing Framework</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/</link>
+      <pubDate>Mon, 14 Dec 2020 16:19:28 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/0-the_web_security_testing_framework/</guid>
+      <description>The Web Security Testing Framework Overview This section describes a typical testing framework that can be developed within an organization. It can be seen as a reference framework comprised of techniques and tasks that are appropriate at various phases of the software development life cycle (SDLC). Companies and project teams can use this model to develop their own testing framework, and to scope testing services from vendors. This framework should not be seen as prescriptive, but as a flexible approach that can be extended and molded to fit an organization&amp;rsquo;s development process and culture.</description>
+    </item>
+    
+    <item>
+      <title>Penetration Testing Methodologies</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/</link>
+      <pubDate>Mon, 14 Dec 2020 16:22:48 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/3-the_owasp_testing_framework/1-penetration_testing_methodologies/</guid>
+      <description>Penetration Testing Methodologies Summary  Penetration Testing Methodologies  Summary OWASP Testing Guides Penetration Testing Execution Standard PCI Penetration Testing Guide  PCI DSS Penetration Testing Guidance PCI DSS Penetration Testing Requirements   Penetration Testing Framework Technical Guide to Information Security Testing and Assessment Open Source Security Testing Methodology Manual References    OWASP Testing Guides In terms of technical security testing execution, the OWASP testing guides are highly recommended.</description>
+    </item>
+    
+  </channel>
+</rss>

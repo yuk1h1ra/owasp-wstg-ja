@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Identity Management Testing on Unofficial japanese translation of OWASP Web Security Testing Guide</title>
+    <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/</link>
+    <description>Recent content in Identity Management Testing on Unofficial japanese translation of OWASP Web Security Testing Guide</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 14 Dec 2020 18:46:22 +0900</lastBuildDate><atom:link href="https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Role Definitions</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/</link>
+      <pubDate>Mon, 14 Dec 2020 18:47:52 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/01-test_role_definitions/</guid>
+      <description>Test Role Definitions    ID     WSTG-IDNT-01    Summary Applications have several types of functionalities and services, and those require access permissions based on the needs of the user. That user could be:
+ an administrator, where they manage the application functionalities. an auditor, where they review the application transactions and provide a detailed report. a support engineer, where they help customers debug and fix issues on their accounts.</description>
+    </item>
+    
+    <item>
+      <title>Test User Registration Process</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/</link>
+      <pubDate>Mon, 14 Dec 2020 18:48:52 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/02-test_user_registration_process/</guid>
+      <description>Test User Registration Process    ID     WSTG-IDNT-02    Summary Some websites offer a user registration process that automates (or semi-automates) the provisioning of system access to users. The identity requirements for access vary from positive identification to none at all, depending on the security requirements of the system. Many public applications completely automate the registration and provisioning process because the size of the user base makes it impossible to manage manually.</description>
+    </item>
+    
+    <item>
+      <title>Test Account Provisioning Process</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/</link>
+      <pubDate>Mon, 14 Dec 2020 18:49:45 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/03-test_account_provisioning_process/</guid>
+      <description>Test Account Provisioning Process    ID     WSTG-IDNT-03    Summary The provisioning of accounts presents an opportunity for an attacker to create a valid account without application of the proper identification and authorization process.
+Test Objectives  Verify which accounts may provision other accounts and of what type.  How to Test Determine which roles are able to provision users and what sort of accounts they can provision.</description>
+    </item>
+    
+    <item>
+      <title>Testing for Account Enumeration and Guessable User Account</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/</link>
+      <pubDate>Mon, 14 Dec 2020 18:50:40 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/04-testing_for_account_enumeration_and_guessable_user_account/</guid>
+      <description>Testing for Account Enumeration and Guessable User Account    ID     WSTG-IDNT-04    Summary The scope of this test is to verify if it is possible to collect a set of valid usernames by interacting with the authentication mechanism of the application. This test will be useful for brute force testing, in which the tester verifies if, given a valid username, it is possible to find the corresponding password.</description>
+    </item>
+    
+    <item>
+      <title>Testing for Weak or Unenforced Username Policy</title>
+      <link>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/</link>
+      <pubDate>Mon, 14 Dec 2020 18:51:50 +0900</pubDate>
+      
+      <guid>https://yuk1h1ra.github.io/owasp-wstg-ja/en/4-web_application_security_testing/03-identity_management_testing/05-testing_for_weak_or_unenforced_username_policy/</guid>
+      <description>Testing for Weak or Unenforced Username Policy    ID     WSTG-IDNT-05    Summary User account names are often highly structured (e.g. Joe Bloggs account name is jbloggs and Fred Nurks account name is fnurks) and valid account names can easily be guessed.
+Test Objectives  Determine whether a consistent account name structure renders the application vulnerable to account enumeration. Determine whether the application&amp;rsquo;s error messages permit account enumeration.</description>
+    </item>
+    
+  </channel>
+</rss>
